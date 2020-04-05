@@ -23,7 +23,15 @@ Vue.use(VueRouter)
     path: '/chat',
     name: 'Chat',
     component: Chat,
-    props: true
+    props: true,
+    beforeEnter: (to, from, next) => {
+      console.log()
+      if(to.params.name){
+        next()
+      } else {
+        next({ name: 'Home'})
+      }
+    }
   },
 ]
 
