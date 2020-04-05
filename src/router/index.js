@@ -22,7 +22,8 @@ Vue.use(VueRouter)
   {
     path: '/chat',
     name: 'Chat',
-    component: Chat
+    component: Chat,
+    props: true
   },
 ]
 
