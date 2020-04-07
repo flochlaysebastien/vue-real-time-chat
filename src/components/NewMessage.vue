@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
+
 export default {
   name: "NewMessage",
   props: {
@@ -27,6 +29,15 @@ export default {
         return
       }
 
+      db.collection('messages').add({
+          name: this.name,
+          content: this.newMessage,
+          timestamp: Date.now()
+      }).catch(err => {
+          console.log(err)
+      })
+
+      this.newMessage = null
       this.feedback = null;
       console.log(this.newMessage, this.name, Date.now());
     }
