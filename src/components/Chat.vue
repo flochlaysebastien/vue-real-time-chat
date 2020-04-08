@@ -36,7 +36,7 @@ export default {
     };
   },
   created(){
-    let ref = db.collection('messages')
+    let ref = db.collection('messages').orderBy('timestamp')
 
     // subscribe to changes to the 'messages' collection
     ref.onSnapshot(snapshot => {
