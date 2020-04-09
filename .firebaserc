@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vue-workshop-applications"
+  },
+  "targets": {
+    "vue-workshop-applications": {
+      "hosting": {
+        "chat": [
+          "workshop-vue-real-time-chat"
+        ]
+      }
+    }
+  }
+}
